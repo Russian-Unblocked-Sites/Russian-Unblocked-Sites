@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Russian Unblocked Sites</title>
+  <style>
+    body {
+      margin: 0;
+      background: #050518;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 220px;
+      background: #07072a;
+      padding: 15px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+    }
+
+    .sidebar button {
+      width: 100%;
+      margin: 6px 0;
+      padding: 10px;
+      background: #1b1b4d;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 6px;
+    }
+
+   .logo {
+     width: 100px; /* change this to whatever size you want */
+     height: auto; /* keeps aspect ratio */
+     display: block; /* optional, removes inline spacing */
+     margin-bottom: 10px; /* optional, spacing below logo */
+    }
+
+    .sidebar button:hover {
+      background: #2d2d7a;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    iframe {
+      width: 90%;
+      height: 80%;
+      border-radius: 10px;
+      border: none;
+      background: #333;
+    }
+
+    .fullscreen {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: red;
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="sidebar">
+ <img src="Github.jpg" class="logo">
+    <h2>R.U.S</h2>
+    <button onclick="loadSite('https://RussianUnblockedSites2.serverpit.com')">Russian Unblocked Sites</button>
+    <button onclick="loadSite('https://archive.org')">Archive</button>
+  </div>
+
+  <div class="main">
+    <iframe id="viewer"></iframe>
+    <button class="fullscreen" onclick="goFullscreen()">Fullscreen</button>
+  </div>
+
+  <script>
+    function loadSite(url) {
+      document.getElementById("viewer").src = url;
+    }
+
+    function goFullscreen() {
+      const iframe = document.getElementById("viewer");
+      if (iframe.requestFullscreen) {
+        iframe.requestFullscreen();
+      }
+    }
+  </script>
+<script>
+  document.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    alert("Right click is disabled.");
+  });
+</script>
+</body>
+</html>
